@@ -1,0 +1,31 @@
+id: usestate_intro
+learningObjectives:
+  - Learn how to use the useState hook to manage state in a functional component.
+hints:
+  - See a simple counter example using
+    [useState](https://reactjs.org/docs/hooks-state.html).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: The useState hook allows you to add state to functional components. It's
+              like giving state powers to functions!
+          - text: "Here's how it works: You provide an initial state value, and useState
+              returns an array with the current state and a function to update
+              it."
+          - text: "For example, to achieve the classic counter example, you'd write: `const
+              [count, setCount] = useState(0);`."
+          - text: This pattern unlocks stateful logic right inside your functions! Try
+              applying useState in various components and see the magic unfold.
+          - text: Need a minute to ponder over its elegance? Just let me know when you're
+              ready to move on!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
