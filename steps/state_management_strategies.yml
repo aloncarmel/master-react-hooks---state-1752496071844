@@ -1,0 +1,38 @@
+id: state_management_strategies
+learningObjectives:
+  - Introduce state management strategies in React applications using hooks.
+hints:
+  - Learn about [State Management](https://reactjs.org/docs/hooks-state.html).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Finally, let's touch on state management strategies using hooks. Managing
+              complex state can be a jog through the park or a taxing marathon;
+              it all depends on your tools.
+          - text: For local state, useState remains your trusty sidekick. When you have
+              deeper trees and shared state, consider useContext or even
+              useReducer for more control.
+          - text: Combine these hooks to create a robust and flexible state management
+              system, ensuring your application's state logic is as clean as a
+              whistle.
+          - text: And with that, you now have a rock-solid foundation to deftly manage state
+              in any React application, thanks to hooks! Great work on the
+              journey, teammate!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: "Congratulations on completing the quest! You're now equipped with React
+                hooks knowledge to power up your applications. 🎉 Remember,
+                hooks are your friends in functional journeys. "
+      - actionId: finish_step
