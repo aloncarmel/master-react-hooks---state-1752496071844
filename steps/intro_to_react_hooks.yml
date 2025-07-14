@@ -1,0 +1,31 @@
+id: intro_to_react_hooks
+learningObjectives:
+  - Understand what React hooks are and why they are used.
+hints:
+  - Check out the official [React Hooks
+    documentation](https://reactjs.org/docs/hooks-intro.html) for an
+    introduction to hooks.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to the world of React hooks! These nifty tools help you use state
+              and other React features without writing a class.
+          - text: Hooks were introduced in React 16.8, offering a way to manage state
+              directly in functional components. This opens up a new realm of
+              possibilities for writing components that are more concise and
+              simpler.
+          - text: We're going to explore popular hooks like useState and useEffect, and see
+              how they revolutionize state management in React apps.
+          - text: Ready for a dot-to-dot adventure connecting state with hooks? I'll be
+              waiting for you to continue!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
