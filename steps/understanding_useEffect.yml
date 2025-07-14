@@ -1,0 +1,34 @@
+id: understanding_useEffect
+learningObjectives:
+  - Learn how to use the useEffect hook to manage side effects in functional
+    components.
+hints:
+  - Study the [useEffect Hook](https://reactjs.org/docs/hooks-effect.html) for
+    understanding it at a deeper level.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Now, let's chat about useEffect - the hook that lets you run side effects.
+              In real life, side effects are things like data fetching or
+              manually changing the DOM.
+          - text: useEffect is like a life cycle guard inside your function component.
+              Remember how class components had componentDidMount and
+              componentDidUpdate? useEffect is the functional counterpart!
+          - text: When using useEffect, you provide a 'function' that describes what should
+              happen after rendering. Picture it as setting up an observation
+              and responding to changes.
+          - text: Don't worry; useEffect ensures your application remains clean and tidy by
+              cleaning up effects when they are no longer needed.
+          - text: Still with me? Great! Show me the nod when you're ready to continue. Or...
+              just click the button.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
