@@ -1,0 +1,30 @@
+id: try_custom_hooks
+learningObjectives:
+  - Understand how to create and use custom hooks to reuse stateful logic.
+hints:
+  - Learn more from [Custom Hooks
+    documentation](https://reactjs.org/docs/hooks-custom.html).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Buckle up because we're diving into custom hooks! Imagine combining
+              multiple hooks and logic into a powerful concoction--voila, you
+              have a custom hook.
+          - text: These are reusable functions that can manage complex stateful logic across
+              components, saving you from repetitive code.
+          - text: Think of a situation where you manage a counter and an API fetch together.
+              Custom hooks can encapsulate both into a neat package.
+          - text: It's all about isolating logic that can be reused across your application.
+              Fancy, isn't it? Alright, give me a shout when you're ready to
+              move on.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
